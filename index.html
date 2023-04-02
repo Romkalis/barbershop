@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Barbershop на Бородинской</title>
+</head>
+<body>
+    <header class="page-header">
+        <nav class="navigation">
+            <ul class="navigation-list">
+                <li class="navigation-item">
+                    <a class="navigation-link" href="about.html">О нас</a>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link" href="catalog.html">Каталог</a>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link" href="faq.html">Частые Вопросы</a>
+                </li>
+            </ul>
+            <ul class="navigation-list navigation-user">
+                <li class="navigation-item">
+                    <a class="navigation-link" href="#">
+                        <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 6.5C11 8.98528 8.98528 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5ZM10.3347 11.7489C9.25973 12.5356 7.9341 13 6.5 13C2.91015 13 0 10.0899 0 6.5C0 2.91015 2.91015 0 6.5 0C10.0899 0 13 2.91015 13 6.5C13 7.9341 12.5356 9.25973 11.7489 10.3347L15.7071 14.2929L14.2929 15.7071L10.3347 11.7489Z"/>
+                        </svg>
+                        <span class="visually-hidden">Поиск</span>
+                    </a>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link" href="#">
+                        <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.09068 6L3.5759 0.90519L3.66211 0H4.5714H11.4285H12.3378L12.424 0.905191L12.9093 6H14.5H15.6328L15.4922 7.12403L14.4922 15.124L14.3828 16H13.5H2.49997H1.61719L1.50769 15.124L0.507692 7.12403L0.367188 6H1.49997H3.09068ZM5.09973 6H10.9002L10.5193 2H5.48068L5.09973 6ZM3.38275 14L2.63275 8H13.3672L12.6172 14H3.38275ZM8.49997 9.5V12.5H10.5V9.5H8.49997ZM5.49997 12.5L5.49997 9.5H7.49997L7.49997 12.5H5.49997Z"/>
+                            </svg>
+                        <span class="visually-hidden">Корзина</span>
+                    </a>
+                    <div class="popover popover-cart">
+                        <button class="popover-close-button" type="button">
+                            <span class="visually-hidden">Закрыть</span>
+                            <span class="popover-numbers">2</span>
+                        </button>
+                        <div class="popver-content">
+                            <h2 class="popover-title">Корзина </h2>
+                            <ul class="popover-cart-list">
+                                <li class="cart-item">
+                                    <p class="cart-item-title">
+                                        Стрижка машинкой
+                                    </p>
+                                    <p class="cart-item-price"> 800 Р</p>
+                                    <button class="cart-delete-button button" type="button">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_97723_1576)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.41989 1L3.7034 0.503861L3.99132 0H4.57164H11.4288H12.0091L12.297 0.503861L12.5805 1H14.5002H15.6288L15.4929 2.12042L13.916 15.1204L13.8093 16H12.9233H3.07714H2.19111L2.08442 15.1204L0.507491 2.12042L0.371582 1H1.50021H3.41989ZM3.96317 14L2.62885 3H13.3716L12.0373 14H3.96317ZM9.00276 4.92875L8.50276 11.9288L10.4977 12.0712L10.9977 5.07125L9.00276 4.92875ZM5.50276 12.0712L5.00276 5.07125L6.99767 4.92875L7.49767 11.9288L5.50276 12.0712Z" fill="white"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_97723_1576">
+                                            <rect width="16" height="16"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="cart-item">
+                                    <p class="cart-item-title">
+                                        Стрижка усов
+                                    </p>
+                                    <p class="cart-item-price"> 1200 Р</p>
+                                    <button class="cart-delete-button button" type="button">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_97723_1576)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.41989 1L3.7034 0.503861L3.99132 0H4.57164H11.4288H12.0091L12.297 0.503861L12.5805 1H14.5002H15.6288L15.4929 2.12042L13.916 15.1204L13.8093 16H12.9233H3.07714H2.19111L2.08442 15.1204L0.507491 2.12042L0.371582 1H1.50021H3.41989ZM3.96317 14L2.62885 3H13.3716L12.0373 14H3.96317ZM9.00276 4.92875L8.50276 11.9288L10.4977 12.0712L10.9977 5.07125L9.00276 4.92875ZM5.50276 12.0712L5.00276 5.07125L6.99767 4.92875L7.49767 11.9288L5.50276 12.0712Z" fill="white"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_97723_1576">
+                                            <rect width="16" height="16"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-login" href="#">
+                        <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2H14V14H9V16H15H16V15V1V0H15H9V2ZM4.29289 3.70711L7.53553 6.94975H0V8.94975H7.53553L4.29289 12.1924L5.70711 13.6066L10.6569 8.65685L11.364 7.94975L10.6569 7.24264L5.70711 2.29289L4.29289 3.70711Z"/>
+                        </svg> Вход
+                    </a>
+                </li>
+            </ul>
+            
+        </nav>
+        
+    </header>
+    <main class="main-container main-index">
+        <div class="page-container">
+        
+            <h1 class="visually-hidden">Барбершоп Бородинский</h1>
+            <img class="logo" src="img/logo-full-white.svg" alt="Логотип Барбершопа Бородинский" width="367" height="152">
+            
+            <section class="advantages">
+                <h2 class="visually-hidden">Наши преимущества</h2>
+                <ul class="advantages-list">
+                    <li class="advantages-item">
+                        <h3 class="advantages-title">Быстро</h3>
+                        <p class="advantages-description">Мы делаем свою работу быстро! Два часа пролетят незаметно, и вы — счастливый обладатель стильной стрижки-минутки!</p>
+                    </li>
+                    <li class="advantages-item">
+                        <h3 class="advantages-title">Круто</h3>
+                        <p class="advantages-description">Забудьте, как вы стриглись раньше.Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
+                    </li>
+                    <li class="advantages-item">
+                        <h3 class="advantages-title">Дорого</h3>
+                        <p class="advantages-description">Наши мастера — профессионалы своего дела и не могут стоить дешево. к тому же, разве цена не даёт определённый статус? </p>
+                    </li>
+                </ul>
+            </section>
+            
+
+            <!-- ПОПУЛЯРНЫЕ УСЛУГИ-->
+
+            <div class="index-columns">
+                <section class="services">
+                    <h2 class="services-title">Популярные услуги</h2>
+                    <ul class="services-list">
+                        <li class="services-item">
+                            Стрижка машинкой
+                            <b class="services-price">800  ₽</b>
+                        </li>
+                        <li class="services-item">
+                            Стрижка усов
+                            <b class="services-price">1200  ₽</b>
+                        </li>
+                        <li class="services-item">
+                            Груминг
+                            <b class="services-price">400  ₽</b>
+                        </li>
+                        <li class="services-item">
+                            Комплексная стрижка
+                            <b class="services-price">2300  ₽</b>
+                        </li>
+                    </ul>
+                    <a class="button button-all" href="#">Посмотреть всё</a>
+                </section>
+
+                
+                <!-- ФОТОГАЛЕРЕЯ-->
+
+                <section class="gallery">
+                    <h2 class="gallery-title">Фотогалерея</h2>
+                    <div class="slider-wrapper">
+                        <img class="slider-image" src="/img/gallery-1.jpg" alt="Примеры работ" width="390" height="250">
+                        <div class="slider-controls">
+                            <button class="slider-button button slider-prev" type="button">
+                                <span class="visually-hidden">Предыдущее фото</span>
+                            </button>
+                            <button class="slider-button button slider-next" type="button">
+                                <span class="visually-hidden">Следующее фото</span>
+                            </button>
+                        </div>
+                        <ol class="slider-pagination">
+                            <li class="slider-pagination-item">
+                                <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                                    <span class="visually-hidden">1 фото</span>
+                                </button>
+                            </li>
+
+                            <li class="slider-pagination-item">
+                                <button class="slider-pagination-button" type="button">
+                                    <span class="visually-hidden">2 фото</span>
+                                </button>
+                            </li>
+
+                            <li class="slider-pagination-item">
+                                <button class="slider-pagination-button" type="button">
+                                    <span class="visually-hidden">3 фото</span>
+                                </button>
+                            </li>
+
+                            <li class="slider-pagination-item">
+                                <button class="slider-pagination-button" type="button">
+                                    <span class="visually-hidden">4 фото</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+            </div>
+            <!--ГРАФИК РАБОТЫ-->
+            <div class="index-columns">
+                <section class="contacts">
+                    <h2 class="contacts-title">Контакты</h2>  
+                    <h3 class="contacts-subtitle">Барбершоп «Бородинский»</h3>
+                    <address class="contacts-address">
+                        <p class="contacts-adress-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+                        <a class="contacts-phone" href="tel:88005558628">+7 800 555-86-28</a>
+                    </address>
+                    <h3 class="contacts-subtitle">Время работы:</h3>
+                    <ul class="contacts-scheldule">
+                        <li class="contacts-scheldule-item">пн—пт: с 10:00 до 22:00</li>
+                        <li class="contacts-scheldule-item">сб—вс: с 10:00 до 19:00</li>
+                    </ul>
+                    <p class="contacts-navigation">
+                        <a class="button" href="#">Как проехать</a>
+                        <a class="button button-feedback button-light" href="#">Обратная связь</a>
+                    </p>
+                </section>
+            <!--ФОРМА ЗАПИСИ-->
+                <section class="appointment">
+                    <h2 class="appointment-title">Записаться</h2>  
+                    <p class="appointment-text">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони.</p>
+                    <form class="appointment-form" action="https://htmlacademy.ru/" method="post">
+
+                        <p class="field-group appointment-form-date">
+                            <span class="form-label form-label-icon">
+                                <label class="form-label" for="appointment-date">Дата
+                                    <button class="info" type="button">
+                                        <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                                    </button>
+                                </label>
+                            </span>
+                            <input class="field" type="text" id="appointment-date" name="appointment-date" placeholder="01.01.2023">
+                        </p>
+
+                        <p class="field-group appointment-form-time">
+                            <span class="form-label form-label-icon">
+                                <label class="form-label" for="appointment-time">Время
+                                <button class="info" type="button">
+                                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                                    </button>
+                                </label>
+                            </span>
+                            <input class="field" type="text" id="appointment-time" name="appointment-time" placeholder="10:15">
+                        </p>
+
+                        <p class="field-group appointment-form-phone">
+                            <label class="form-label" for="appointment-phone">Телефон</label>
+                            <input class="field" type="text" id="appointment-phone" name="appointment-phone" placeholder="+7 900 100 20 30">
+                        </p>
+
+                        <p class="field-group appointment-form-name">
+                            <label class="form-label" for="appointment-name">Ваше имя</label>
+                            <input class="field" type="text" id="appointment-name" name="appointment-name" placeholder="Ваше Имя">
+                        </p>
+                        <button class="button appointment-submit" type="submit">Записаться</button>
+                    </form>
+                </section>
+            </div>
+        </div>    
+    </main>
+
+    <footer class="page-footer">
+        <div class="page-footer-container">
+            <section class="footer-contacts">
+                <h2 class="visually-hidden">Контакты</h2>
+                <img class="footer-contacts-logo" src="img/logo-short-dark.svg" alt="Логотип барбершоп Бородинский" width="187" height="24">
+                <address class="footer-contacts-address">
+                    <p class="about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+                    <a class="footer-contacts-phone" href="tel:88005558628">+7 800 555-86-28</a>
+                </address>
+                <a class="footer-map-link" href="#">Как нас найти?</a>
+            </section>
+
+            <section class="newsletter">
+                <h2 class="page-footer-title">Получайте лучшие предложения</h2>
+                <form class="newsletter-form" action="https://htmlacademy.ru/" method="post">
+                    
+                    <p class="newsletter-email">
+                        <label class="visually-hidden" for="newsletter-email">Email</label>
+                        <input class="field" type="email" id="newsletter-email" name="newsletter-email" placeholder="email@example.com" required>
+                    </p>
+                    <button class="button newsletter-button" type="submit">
+                        <span class="visually-hidden">Отправить</span>
+                    </button>
+                </form> 
+            </section>
+
+            <section class="footer-social">
+                <h2 class="page-footer-title">Давайте дружить</h2>
+                <ul class="footer-social-list">
+                    <li class="footer-social-item">
+                        <a class="button footer-social-link footer-social-tw" href="#">
+                            <!-- <img class="footer-social-button" src="/img/twitter.png" alt="Значок Твиттер" width="16px" height="16px"> -->
+                            <span class="visually-hidden">Twitter</span>
+                        </a>
+                    </li>
+
+                    <li class="footer-social-item">
+                        <a class="button footer-social-link footer-social-vk" href="#">
+                            <!-- <img class="footer-social-button" src="/img/vk.svg" alt="Значок Вконтакте" width="16px" height="16px"> -->
+                            <span class="visually-hidden">ВКонтакет</span>
+                        </a>
+                    </li>
+
+                    <li class="footer-social-item">
+                        <a class="button footer-social-link footer-social-insta" href="#">
+                            <!-- <img class="footer-social-button" src="/img/instagram.svg" alt="Значок Инстаграмм" width="16px" height="16px"> -->
+                            <span class="visually-hidden">Инстаграм</span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="about-text">Сделано в<a class="htmlacademy-link" href="https://htmlacademy.ru">.html academy</a></p>
+            </section>
+        </div>
+    </footer> 
+    <div class="modal-container modal-container-close">
+        <div class="modal-login">
+            <h2 class="modal-title">Личный кабинет</h2>
+            <button class="modal-close-button">
+                <span class="visually-hidden">Закрыть окно</span>
+            </button>
+            <form class="modal-login-form">
+                <input class="field login-input" type="text" name="login-input" placeholder="Логин">
+                <input  class="field login-password" type="password" name="login-password" placeholder="Пароль">
+                <label class="control">
+                    <input class="visually-hidden control-input" type="checkbox" name="remember-me" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Запомнить меня</span>
+                </label>
+                <a class="forgot-password" href="#">Забыл пароль</a>
+            </form>
+            <button class="modal-login-button button">Войти</button>
+            <button class="modal-register-button button button-light">Регистрация</button>
+        </div>
+    </div>  
+</body>
+</html>
