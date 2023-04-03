@@ -35,6 +35,7 @@ html {
 }
 body {
     margin: 0;
+    min-width: 1020px;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -181,13 +182,17 @@ body {
 
 .navigation-user {
     margin-left: auto;
-    max-width: 210px;
+    max-width: 310px;
+    justify-content: flex-end;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .navigation-user .navigation-link {
     min-width: 16px;
     min-height: 22px;
 }
+
 .navigation-item {
     position: relative;
 }
@@ -234,8 +239,10 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 55px;
+    row-gap: 30px;
     list-style-type: none;
     margin-bottom: 58px;
 }
@@ -260,12 +267,12 @@ body {
 }
 .advantages-title::before {
     position: absolute;
-    bottom: -40px;
+    bottom: -35px;
     left: 50%;
-    margin-left: -9px;
+    margin-left: -6px;
     content: "";
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
     background-color: #ffffff;
     transform: rotate(45deg);
 }
@@ -275,15 +282,19 @@ body {
 
 /*INDEX COLUMNS*/
 
+
 .index-columns {
     position: relative;
     display: flex;
     justify-content: space-between;
     margin-bottom: 32px;
-    padding: 40px;
+    padding: 40px 40px 35px;
     color: #000000;
     background-color: #FBF7F4;
     background-image: url("/img/bg-noise.png");
+}
+.index-columns:first-child {
+    padding: 40px;
 }
 
 .index-columns:last-child {
@@ -331,6 +342,7 @@ body {
 }
 
 .services-item {
+    font-family: "PT Sans Narrow",  sans-serif;
     margin-bottom: 22px;
     color: #242424;
     display: flex;
@@ -414,7 +426,7 @@ body {
 }
 
 .appointment-submit {
-    margin-top: 2px;
+    margin-top: 4px;
     grid-column: 1 / -1;
     justify-self: start;
 }
@@ -424,8 +436,9 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-
+.appointment .field {
+    border: 2px solid #242424;
+}
 
 
 
@@ -449,12 +462,13 @@ body {
     background-image: url("/img/slider-arrow.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    transform: translateY(-25%);
     cursor:pointer;
     border: none;
 }
 
 .slider-prev {
-    transform: rotate(180deg);
+    transform: rotate(180deg) translateY(25%);;
 }
 .slider-button:hover {
     background-color: #814B18;
@@ -475,6 +489,7 @@ body {
 .slider-pagination-button {
     margin:0;
     padding: 0;
+    margin-top: 16px;
     width: 8px;
     height: 8px;
     background-color: #BDBDBD;
@@ -523,10 +538,11 @@ body {
     line-height: 28px;
     color: #AF7842;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .contacts-adress-text {
+    margin: 0;
     font-weight: 700;
     font-style: normal;
     margin-bottom: 8px;
@@ -550,15 +566,16 @@ body {
     font-weight: 700;
 }
 .contacts-navigation {
+    margin: 0;
     margin-top: 21px;
 }
 
-.button-feedback { /*Говорит нам о том, что если с правым баттон 
-    стоит еще 1 баттон
-    (селектор слева), то будут применяться вот эти вот свойства, прчем
-    применяться они будут к последнему элементу
-    в CSS строке, то есть ко второму баттону */
-    margin-left: 16px;
+.contacts-navigation .button {
+    margin-right: 16px;
+    margin-bottom: 5px;
+}
+.button-feedback {
+    max-width: 164px;;
 }
 
 .button-feedback {
@@ -600,8 +617,9 @@ body {
 }
 
 .field {
+    box-sizing: border-box;
     margin: 0;
-    padding: 10px 12px;
+    padding: 8px 12px;
     
     border: 2px solid #242424;
     background-color: #ffffff;
@@ -647,7 +665,7 @@ body {
 
 .footer-contacts-logo {
     display: block;
-    margin-bottom: 27px;
+    margin-bottom: 22px;
 }
 .about-text {
     font-weight: 700;
@@ -670,6 +688,9 @@ page-footer-title {
 .newsletter {
     width: 280px;
 }
+.newsletter .page-footer-title {
+    margin-bottom: 18px;
+}
 
 .newsletter-form {
     display: flex;
@@ -689,10 +710,12 @@ page-footer-title {
     padding: 0;
     box-sizing: border-box;
     flex-grow: 1;
+
 }
 .newsletter-email .field {
-    border:none;
+    border: none;
     width: 100%;
+    padding: 10px 12px;
 }
 .footer-social {
     max-width: 190px;
@@ -798,11 +821,12 @@ page-footer-title {
 
 .breadscrumbs {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     color: #242424;
     list-style-type: none;
-
+    margin-bottom: 32px;
 }
 .breadscrumbs-item {
     position: relative;
@@ -811,7 +835,7 @@ page-footer-title {
 .breadscrumbs-item::before {
     position: absolute;
     top:0;
-    right: 10px;
+    right: 12px;
     bottom: 0;
     margin: auto;
     width: 8px;
@@ -836,6 +860,7 @@ page-footer-title {
 
 /*RANGE*/
 .range-scale {
+    margin-top: 8px;
     position: relative;
     height: 4px;
     border-radius: 2px;
@@ -899,12 +924,18 @@ page-footer-title {
 }
 .catalog-filter-title {
     text-transform: uppercase;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 20px;
 }
 .catalog-filter-group {
     margin: 0;
     padding: 0;
-    margin-bottom: 40px;
+    margin-bottom: 38 px;
     border: none;
+    
 }
 
 /*Стилизазия Чекбоксов и радиокнопок*/
@@ -963,7 +994,11 @@ page-footer-title {
 }
 .control-label {
     font-weight: 700;
-    line-height: 22.4px;
+    line-height: 22px;
+}
+
+.filter-button {
+    margin-bottom: 40px;
 }
 
 /*CATALOG PRODUCTS*/
@@ -986,29 +1021,24 @@ page-footer-title {
     list-style-type: none;
 }
 .catalog-filter-item {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 .catalog-filter-item:last-child {
     margin: 0;
 }
-.catalog-filter-title {
-    font-family: "PT Sans Narrow", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 28px;
-    margin-bottom: 22px;
-}
+
 
 
 /*Sorting Container*/
 
-.sorting-container {
+.sorting-container { 
     display: flex;
+    flex-wrap: wrap;
     background-color: #ffffff;
     color:#000000;
     padding: 16px;
-    margin-bottom: 32px;
-   
+    margin-bottom: 16px;
+    box-shadow: 0px 4px 8px rgba(79, 70, 60, 0.16);
 }
 .sorting-type {
     margin-right: auto;
@@ -1053,6 +1083,7 @@ page-footer-title {
     width: 56px;
     height: 44px;
     background-color: #ffffff;
+    
 }
 .card-grid-toggle-current svg {
     fill: #000000;
@@ -1123,8 +1154,12 @@ page-footer-title {
     background-color: #ffffff;
     grid-template-rows: 200px min-content auto min-content 16px;
     grid-template-columns: 16px 188px 16px;
+    box-shadow: 0px 4px 8px rgba(79, 70, 60, 0.16); 
 }
 .product-card-link {
+    display: flex;
+    min-height: 200px;
+    background-color: #F7F7F7;
     grid-column: 1 / -1;
 }
 .product-card-title,
@@ -1133,6 +1168,7 @@ page-footer-title {
     grid-column: 2 / 3;
 }
 .product-card-title {
+    font-size: 16px;
     margin-bottom: 8px;
 }
 .product-card-price {
@@ -1140,6 +1176,7 @@ page-footer-title {
 }
 
 .product-card-image {
+    margin: auto;
     background-color:#f7f7f7; 
 }
 
@@ -1161,20 +1198,29 @@ page-footer-title {
 
 .pagination-container {
     display: flex;
+    justify-content: flex-start;
     padding: 16px;
+    background-color: #ffffff;
+    margin-bottom: 60px;
+    box-shadow: 0px 4px 8px rgba(79, 70, 60, 0.16);
 }
 
 .pagination {
     margin: 0;
+    padding: 0;
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
+}
+.pagination-item {
+    margin-bottom: 5px;
 }
 
 .pagination-link {
     display: block;
     box-sizing: border-box;
-    width: 50px;
-    height: 44px;
+    min-width: 50px;
+    min-height: 44px;
     line-height: 16px;
     font-weight: 700;
     color: #ffffff;
@@ -1191,18 +1237,21 @@ page-footer-title {
     color: #ffffff;
 }
 .pagination-show-more {
+    max-width: 170px;
     margin-left: auto;
 }
 .pagination-item:not(:last-child) {
     margin-right: 8px;
 }
 .pagination-prev {
+    width: 56px;
     background-image: url("/img/arrow-left.svg");
     background-repeat: no-repeat;
     background-size: 16px 16px;
     background-position: center;
 }
 .pagination-next {
+    width: 56px;
     background-image: url("/img/arrow-right.svg");
     background-repeat: no-repeat;
     background-size: 16px 16px;
